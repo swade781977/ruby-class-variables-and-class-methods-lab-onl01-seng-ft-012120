@@ -10,7 +10,7 @@ class Song
     @@count += 1
     @@artists << artist
   end
-  attr_accessor :name, :artist :genre
+  attr_accessor :name, :artist, :genre
   def self.artists
     artists_array = []
     @@artists.each do |artist|
