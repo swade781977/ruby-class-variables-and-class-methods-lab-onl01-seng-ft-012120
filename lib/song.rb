@@ -13,7 +13,10 @@ class Song
   def artists
     artists_array = []
     @@artists.each do |artist|
-      if artists_array.include(artist)
+      artists_array << artists_array
+    end
+    artists_array.uniq!
+  end
         
   def self.genre_count
     genre_count = {}
