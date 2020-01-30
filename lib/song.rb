@@ -10,6 +10,9 @@ class Song
     @@artists << artist
   end
   attr_accessor :name, :artist, :genre
+  def artists
+    artists_array = []
+    if artists_array.
   def self.genre_count
     genre_count = {}
     counter = 1
