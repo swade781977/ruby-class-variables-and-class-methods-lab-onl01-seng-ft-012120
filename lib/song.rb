@@ -12,7 +12,9 @@ class Song
   attr_accessor :name, :artist, :genre
   def artists
     artists_array = []
-    if artists_array.
+    @@artists.each do |artist|
+      if artists_array.include(artist)
+        
   def self.genre_count
     genre_count = {}
     counter = 1
