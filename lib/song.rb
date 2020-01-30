@@ -18,11 +18,7 @@ class Song
     artists_array.uniq!
   end
   def self.genres
-    genres_array = []
-    @@genres.each do |genre|
-      genres_array << genre 
-    end
-    genres_array.uniq!
+    @@genres.uniq
   end
         
   def self.genre_count
