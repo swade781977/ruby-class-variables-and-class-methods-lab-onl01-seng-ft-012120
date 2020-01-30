@@ -10,14 +10,14 @@ class Song
     @@artists << artist
   end
   attr_accessor :name, :artist, :genre
-  def artists
+  def self.artists
     artists_array = []
     @@artists.each do |artist|
       artists_array << artist
     end
     artists_array.uniq!
   end
-  def genres
+  def self.genres
     genres_array = []
     @@genres.each do |genre|
       genres_array << genre 
