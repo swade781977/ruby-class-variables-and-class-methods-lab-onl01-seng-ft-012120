@@ -24,14 +24,26 @@ class Song
   end
   def self.genre_count
     genre_count = {}
+    counter = 1
     @@genres.each do |genre|
       if genre_count.key?(genre)
-        genre_count[genre]
+        genre_count[genre] = counter + 1
+        counter += 1
+      else
+        genre_count[genre] = 1 
+      end
+    end
   end
   def self.artist_count
     artist_count ={}
+    counter = 1
     @@artists.each do |artist|
-      artist_count[artist] = 1 ||= artist_count[genre] += 1 
+      if artist_count.key?(artist)
+        artist_count[artist] = counter + 1
+        counter += 1
+      else
+        artist_count[artist] = 1 
+      end
     end
   end
   def self.count
