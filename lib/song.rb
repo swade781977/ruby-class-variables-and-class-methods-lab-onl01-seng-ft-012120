@@ -5,11 +5,12 @@ class Song
   def initialize(name, artist, genre)
     @name = name
     @artist = artist
+    @genre = genre
     @@genres << genre
     @@count += 1
     @@artists << artist
   end
-  attr_accessor :name, :artist, :genre
+  attr_accessor :name, :artist
   def self.artists
     artists_array = []
     @@artists.each do |artist|
@@ -18,7 +19,11 @@ class Song
     artists_array.uniq!
   end
   def self.genres
-    @@genres.uniq
+    genres_array = []
+    @@genres.each do |genre|
+      genres_array << genre 
+    end
+    genres_array.uniq!
   end
         
   def self.genre_count
@@ -51,3 +56,4 @@ class Song
     @@count
   end
 end
+
