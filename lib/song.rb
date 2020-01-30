@@ -22,7 +22,7 @@ class Song
     @@genres.each do |genre|
       genres_array << genre 
     end
-  genres_array.uniq!
+    genres_array.uniq!
   end
         
   def self.genre_count
