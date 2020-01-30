@@ -9,19 +9,7 @@ class Song
     @@count += 1
     @@artists << artist
   end
-  attr_reader :name, :artist, :genre
-  def name=(name)
-    @name = name
-    
-  end
-  def artist(artist)
-    @@artists[@@artists.index(@artist)] = artist
-    @artist = artist
-  end
-  def genre(genre)
-    @@genres[@@genres.index(@genre)] = genre
-    @genre = genre
-  end
+  attr_accessor :name, :artist, :genre
   def self.genre_count
     genre_count = {}
     counter = 1
